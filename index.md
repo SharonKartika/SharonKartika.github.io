@@ -16,8 +16,10 @@ Ps: if you want to modify the header or footer or the general look of the websit
 ## The base with Markdown
 
 <!-- {{insert /Sketches/Brownian/iframeforbrownian.html}} -->
-{{insert ../Projects/BrownTest}}
-
+<!-- {{insert /../__site/Projects/BrownTest}} -->
+~~~
+<iframe src="/Projects/BrownTest/index.html" scrolling="no" title="W3Schools Free Online Web Tutorials"></iframe>
+~~~
 
 The [standard markdown syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) can be used such as titles using `#`, lists:
 
