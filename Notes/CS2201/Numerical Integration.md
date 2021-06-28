@@ -20,11 +20,11 @@ numeric_integral = IntegrateRiemann(f, 0., 1., 10)
 print("Numeric integral: %6f \nAnalytic integral: %6f \nDifference: %6f" \
      % (numeric_integral, analytic_integral, abs(numeric_integral-analytic_integral))) 
 ```
-
-    Numeric integral: 0.202500 
-    Analytic integral: 0.250000 
-    Difference: 0.047500
-
+```
+Numeric integral: 0.202500 
+Analytic integral: 0.250000 
+Difference: 0.047500
+```
 
 An improvement can be achieved by calculating the the function at the midpoints of the $N$ intervals
 
@@ -43,11 +43,11 @@ numeric_integral_mid = IntegrateRiemann_mid(f, 0., 1., 10)
 print("Numeric integral: %6f \nAnalytic integral: %6f \nDifference: %6f" \
      % (numeric_integral_mid, analytic_integral, abs(numeric_integral_mid-analytic_integral))) 
 ```
-
-    Numeric integral: 0.248738 
-    Analytic integral: 0.250000 
-    Difference: 0.001262
-
+```
+Numeric integral: 0.248738 
+Analytic integral: 0.250000 
+Difference: 0.001262
+```
 
 ## Trapezoidal rule
 Divide the interval into $N$ equally spaced intervals. A trapezoidal approximation to the area in the interval $[x_n,x_{n+1}]$ is 
@@ -78,10 +78,11 @@ print("Numeric integral: %6f \nAnalytic integral: %6f \nDifference: %6f" \
      % (numeric_integral, analytic_integral, abs(numeric_integral-analytic_integral))) 
 ```
 
-    Numeric integral: 0.252500 
-    Analytic integral: 0.250000 
-    Difference: 0.002500
-
+```
+Numeric integral: 0.252500 
+Analytic integral: 0.250000 
+Difference: 0.002500
+```
 
 ## Simpson's rule
 
@@ -142,8 +143,8 @@ numeric_integral = IntegrateSimpson(f, 0., 1., 10)
 print("Numeric integral: %10.10f \nAnalytic integral: %10.10f \nDifference: %10.10f" \
      % (numeric_integral, analytic_integral, abs(numeric_integral-analytic_integral))) 
 ```
-
-    Numeric integral: 0.2500000000 
-    Analytic integral: 0.2500000000 
-    Difference: 0.0000000000
-
+```
+Numeric integral: 0.2500000000 
+Analytic integral: 0.2500000000 
+Difference: 0.0000000000
+```
