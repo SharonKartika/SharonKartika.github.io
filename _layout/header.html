@@ -8,7 +8,11 @@
             <li><a href="/Projects/">Projects</a></li>
             <li><a href="/Articles/">Articles</a></li>
             <li><a href="/Notes/">Notes</a></li>
-            <li><button onclick="toggleTheme()" style="height:20px; width:20px;border-radius: 50%;"></button></li>
+            <li>
+                <a onclick="toggleTheme()">
+                    <image id="themechangebutton" alt="Change theme" src="assets/themeselect.png">
+                </a>
+            </li>
 
             <script>
                 if (!localStorage.getItem('theme')) {
