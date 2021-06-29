@@ -1,12 +1,46 @@
 <header>
-<div class="blog-name"><p>Sharon Kartika</p></div>
-<nav>
-  <ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/Projects/">Projects</a></li>
-    <li><a href="/Articles/">Articles</a></li>
-    <li><a href="/Notes/">Notes</a></li>
-  </ul>
-  <img src="/assets/hamburger.svg" id="menu-icon">
-</nav>
+    <div class="blog-name">
+        <p>Sharon Kartika</p>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/Projects/">Projects</a></li>
+            <li><a href="/Articles/">Articles</a></li>
+            <li><a href="/Notes/">Notes</a></li>
+            <li><button onclick="toggleTheme()" style="height:20px; width:20px;border-radius: 50%;"></button></li>
+
+            <script>
+                function setTheme(themeName) {
+                    localStorage.setItem('theme', themeName);
+                    document.documentElement.className = themeName;
+                }
+
+                function toggleTheme() {
+                    if (localStorage.getItem('theme') === 'theme-dark') {
+                        setTheme('theme-light');
+                    } else if (localStorage.getItem('theme') === 'theme-light') {
+                        setTheme('theme-high-contrast');
+                    } else if (localStorage.getItem('theme') === 'theme-high-contrast') {
+                        setTheme('theme-outrun');
+                    } else if (localStorage.getItem('theme') === 'theme-outrun') {
+                        setTheme('theme-dark');
+                    }
+                }
+
+                (function() {
+                    if (localStorage.getItem('theme') === 'theme-dark') {
+                        setTheme('theme-dark');
+                    } else if (localStorage.getItem('theme') === 'theme-light') {
+                        setTheme('theme-light');
+                    } else if (localStorage.getItem('theme') === 'theme-high-contrast') {
+                        setTheme('theme-high-contrast');
+                    } else if (localStorage.getItem('theme') === 'theme-outrun') {
+                        setTheme('theme-outrun');
+                    }
+                })();
+            </script>
+        </ul>
+        <img src="/assets/hamburger.svg" id="menu-icon">
+    </nav>
 </header>
