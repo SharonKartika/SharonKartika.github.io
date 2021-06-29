@@ -11,6 +11,10 @@
             <li><button onclick="toggleTheme()" style="height:20px; width:20px;border-radius: 50%;"></button></li>
 
             <script>
+                if (!localStorage.getItem('theme')) {
+                    localStorage.setItem('theme', 'theme-light');
+                }
+
                 function setTheme(themeName) {
                     localStorage.setItem('theme', themeName);
                     document.documentElement.className = themeName;
