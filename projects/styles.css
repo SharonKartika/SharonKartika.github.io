@@ -1,0 +1,27 @@
+.projectdiv {
+    background-color: #e6e6e6;
+    /* border: 1px solid black;  */
+    /* box-shadow: 0px 0px 1px 5px grey; */
+    border-radius: 0%;
+    padding: 20px;
+    padding:10px;
+    margin-bottom: 15px;
+}
+
+.projectdiv h2 {
+    margin-top: 0;
+}
+
+.projectdiv p {
+    padding: 3%;
+    width: 50%;
+}
+
+.para-image {
+    display:flex;
+}
+.projectdiv img {
+    width: 50%;
+    height: 300px;
+    object-fit: cover;
+}

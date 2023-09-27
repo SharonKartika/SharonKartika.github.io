@@ -1,0 +1,12 @@
+.lecture-div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+p {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 20px;   
+}
