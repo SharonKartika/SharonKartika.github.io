@@ -1,0 +1,33 @@
+<!doctype html> <html lang=en > <meta charset=UTF-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <link rel=stylesheet  href="/libs/highlight/styles/github.min.css"> <link rel=stylesheet  href="/css/franklin.css"> <link rel=stylesheet  href="/css/basic.css"> <link rel=icon  href="/assets/favicon.png"> <title>Evolutionary algorithms and GRN</title> <header> <div class=blog-name ><a href="/">Sharon Kartika</a></div> <nav> <ul> <li><a href="/">Home</a> <li><a href="/projects/">Projects</a> <li><a href="/notes/">Notes</a> </ul> <img src="/assets/hamburger.svg" id=menu-icon > </nav> </header> <div class=franklin-content > <h2 id=evolutionary_algorithms_for_grn ><a href="#evolutionary_algorithms_for_grn" class=header-anchor >Evolutionary algorithms for GRN</a></h2> <p>Functions to apply evolutionary algorithms to models of GRN are included here.</p> <p><img src=grn-evolution-schematic.png  alt="Alt text" /></p> <h3 id=steps ><a href="#steps" class=header-anchor >Steps</a></h3> <p>Include the script in Julia environment </p> <pre><code class="julia hljs">include(<span class=hljs-string >&quot;ModularEvolutionScript.jl&quot;</span>)</code></pre>
+<p>Define a Fitness Function that takes in an interaction matrix, and returns a score.</p>
+<pre><code class="julia hljs">fitnessfunction(A) = sum(A) <span class=hljs-comment ># for example</span></code></pre>
+<p>Define an initial network as an interaction matrix.</p>
+<pre><code class="julia hljs">J = rand(-<span class=hljs-number >1</span>:<span class=hljs-number >1</span>, <span class=hljs-number >10</span>, <span class=hljs-number >10</span>) <span class=hljs-comment ># 10 X 10 random matrix with elements in {-1, 0, 1}</span></code></pre>
+<p>Call the evolutionary algorithm function with the above two parameters.</p>
+<pre><code class="julia hljs">X, Xs = evolveNet(J, fitnessfunction)</code></pre>
+<p><code>X</code> is a vector of the best networks at each iteration, and <code>Xs</code> a vector of their fitness.</p>
+<h3 id=available_evolution_functions ><a href="#available_evolution_functions" class=header-anchor >Available evolution functions</a></h3>
+<p><code>evolveNet</code>: Keeps track of all the networks previously generated. New networks generated are tested only if they are not previously generated. &#40;The algorithm slows down with the number of iterations due to this check&#41;.</p>
+<p><code>evolveNetBlind</code>: Generates mutants at each iteration, selects the best one. No memory of what networks have already been seen. &#40;Likely to get stuck in local optima&#41;.</p>
+<p><code>evolveNetTabu</code>: Keeps a list of networks seen in the last <code>k</code> generations &#40;default <code>k&#61;10</code>&#41;. Generated mutants are considered only if they are not in this list. </p>
+<p><code>evolveNetMonotone</code>: A mutant is selected only if its score is greater than all the networks previously seen. &#40;And thus may return fewer selected networks than the number of iterations&#41;.</p>
+<h3 id=additional_arguments ><a href="#additional_arguments" class=header-anchor >Additional arguments</a></h3>
+<p>The functions implementing the evolutionary algorithms can take in these additional parameters.</p>
+<pre><code class="JULIA hljs"><span class=hljs-keyword >function</span> evolveNet(J::<span class=hljs-built_in >AbstractMatrix</span>,
+                    fitnessFunction::<span class=hljs-built_in >Function</span>;
+                    nmutants::<span class=hljs-built_in >Int</span>=<span class=hljs-number >10</span>,
+                    nr::<span class=hljs-built_in >Int</span>=<span class=hljs-number >0</span>,
+                    niter::<span class=hljs-built_in >Int</span>=<span class=hljs-number >100</span>)</code></pre>
+<p><code>nmutants</code>: number of mutants generated in each iteration.</p>
+<p><code>nr</code>: number of elements mutated at each iteration. &#40;If <code>0</code> is passed, the mutation rate is 10&#37;. <em>i.e,</em> 10&#37; of the edges are mutated&#41;. </p>
+<p><code>niter</code>: number of iterations of mutation-selection.</p>
+ 
+<div class=page-foot >
+    Sharon Kartika. Last modified: September 27, 2023.
+</div>
+
+</div>
+    
+    
+        <script src="/libs/highlight/highlight.min.js"></script>
+<script>hljs.highlightAll();hljs.configure({tabReplace: '    '});</script>
