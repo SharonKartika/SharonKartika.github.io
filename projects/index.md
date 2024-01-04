@@ -28,5 +28,5 @@ var2 = "Hello goodbye"
 \projectdiv{network-evolution}
 \projectdiv{cell-migration}
 \projectdiv{reaction-diffusion}
-\projectdiv{viczek-model}
+\projectdiv{vicsek-model}
 \projectdiv{nagel-schreckenberg}

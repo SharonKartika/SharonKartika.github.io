@@ -4,4 +4,3 @@ desc="Using Lenia, a continuous cellular automata framework, to model growth and
 thumbimage="lenia-cancer.png"
 tags=["Cellular Automata", "Julia"]
 +++
-asdf

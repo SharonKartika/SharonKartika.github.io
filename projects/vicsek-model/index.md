@@ -1,9 +1,11 @@
 +++
-title="Viczek model"
+title="vicsek model"
 desc="Emergence of global order in a system of locally interacting agents. As the noise decreases, order-appears faster."
-thumbimage="viczek-model.png"
+thumbimage="vicsek-model.png"
 tags=["Javascript", "P5.js", "Agent Based Model"]
 +++
 
+Live Demo: 
 
-asdf
+[https://sharonkartika.github.io/AverageAgentsJS/](https://sharonkartika.github.io/AverageAgentsJS/)
+

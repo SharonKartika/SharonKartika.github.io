@@ -9,7 +9,11 @@ tags=["Julia", "Graph Theory", "Evolutionary algorithm", "Optimisation"]
 
 Functions to apply evolutionary algorithms to models of GRN are included here.
 
-![Alt text](grn-evolution-schematic.png)
+<!-- ![Alt text](grn-evolution-schematic.png) -->
+~~~
+<img src="grn-evolution-schematic.png" width="100%">
+~~~
+
 
 ### Steps
 

@@ -5,4 +5,10 @@ thumbimage="nagel-schreckenberg.png"
 tags=["Monte Carlo", "Pyodide", "wasm", "python"]
 +++
 
-lsdjkf
+Project page:
+
+[https://github.com/SharonKartika/NagelSchreckenberg](https://github.com/SharonKartika/NagelSchreckenberg)
+
+Demo: 
+
+[https://sharonkartika.github.io/NagelSchreckenberg/](https://sharonkartika.github.io/NagelSchreckenberg/)
