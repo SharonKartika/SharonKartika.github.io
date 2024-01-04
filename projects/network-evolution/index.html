@@ -1,4 +1,4 @@
-<!doctype html> <html lang=en > <meta charset=UTF-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <link rel=stylesheet  href="/libs/highlight/styles/github.min.css"> <link rel=stylesheet  href="/css/franklin.css"> <link rel=stylesheet  href="/css/basic.css"> <link rel=icon  href="/assets/favicon.png"> <title>Evolutionary algorithms and GRN</title> <header> <div class=blog-name ><a href="/">Sharon Kartika</a></div> <nav> <ul> <li><a href="/">Home</a> <li><a href="/projects/">Projects</a> <li><a href="/notes/">Notes</a> </ul> <img src="/assets/hamburger.svg" id=menu-icon > </nav> </header> <div class=franklin-content > <h2 id=evolutionary_algorithms_for_grn ><a href="#evolutionary_algorithms_for_grn" class=header-anchor >Evolutionary algorithms for GRN</a></h2> <p>Functions to apply evolutionary algorithms to models of GRN are included here.</p> <p><img src=grn-evolution-schematic.png  alt="Alt text" /></p> <h3 id=steps ><a href="#steps" class=header-anchor >Steps</a></h3> <p>Include the script in Julia environment </p> <pre><code class="julia hljs">include(<span class=hljs-string >&quot;ModularEvolutionScript.jl&quot;</span>)</code></pre>
+<!doctype html> <html lang=en > <meta charset=UTF-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <link rel=stylesheet  href="/libs/highlight/styles/github.min.css"> <link rel=stylesheet  href="/css/franklin.css"> <link rel=stylesheet  href="/css/basic.css"> <link rel=icon  href="/assets/favicon.png"> <title>Evolutionary algorithms and GRN</title> <header> <div class=blog-name ><a href="/">Sharon Kartika</a></div> <nav> <ul> <li><a href="/">Home</a> <li><a href="/projects/">Projects</a> <li><a href="/notes/">Notes</a> </ul> <img src="/assets/hamburger.svg" id=menu-icon > </nav> </header> <div class=franklin-content > <h2 id=evolutionary_algorithms_for_grn ><a href="#evolutionary_algorithms_for_grn" class=header-anchor >Evolutionary algorithms for GRN</a></h2> <p>Functions to apply evolutionary algorithms to models of GRN are included here.</p> <img src=grn-evolution-schematic.png  width="100%"> <h3 id=steps ><a href="#steps" class=header-anchor >Steps</a></h3> <p>Include the script in Julia environment </p> <pre><code class="julia hljs">include(<span class=hljs-string >&quot;ModularEvolutionScript.jl&quot;</span>)</code></pre>
 <p>Define a Fitness Function that takes in an interaction matrix, and returns a score.</p>
 <pre><code class="julia hljs">fitnessfunction(A) = sum(A) <span class=hljs-comment ># for example</span></code></pre>
 <p>Define an initial network as an interaction matrix.</p>
@@ -23,7 +23,7 @@
 <p><code>niter</code>: number of iterations of mutation-selection.</p>
  
 <div class=page-foot >
-    Sharon Kartika. Last modified: September 27, 2023.
+    Sharon Kartika. Last modified: January 04, 2024.
 </div>
 
 </div>
